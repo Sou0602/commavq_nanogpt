@@ -109,5 +109,8 @@ https://drive.google.com/drive/folders/1ir8xxywEh3fWsWhd66ARkIDFHPQzCoBU?usp=sha
 The drive link has three folders names, out-commavq, out-commavq_1,out-commavq_2. Each folder has a ckpt.pt and ckpt.onnx. To evaluate with these checkpoints, download the folder and copy it to the root directory of the repo. 
 In config/eval_commavq.py, change the out_dir accordingly. 
 
+## Running on Multiple Nodes
+The code can also run on the karpathy train.py and model.py, if the config and data are moved to the karpathy's nanogpt repo. Follow more instructions in that repo to run on multiple nodes.
+
 
 
