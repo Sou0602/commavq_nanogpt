@@ -10,9 +10,9 @@
     * commavq
         * prepare.py
         * create_meta_pkl.py
-* out-commavq   - Folder with checkpoints for config 1 (not present in the repo, add from google drive)
-* out-commavq_1 - Folder with checkpoints for config 2 (not present in the repo, add from google drive)
-* out-commavq_2 - Folder with checkpoints for config 3 (not present in the repo, add from google drive)
+* out-commavq   - Folder with checkpoints for config 1 (not present in the repo, add from google drive[https://drive.google.com/drive/folders/1ir8xxywEh3fWsWhd66ARkIDFHPQzCoBU?usp=sharing])
+* out-commavq_1 - Folder with checkpoints for config 2 (not present in the repo, add from google drive[https://drive.google.com/drive/folders/1ir8xxywEh3fWsWhd66ARkIDFHPQzCoBU?usp=sharing])
+* out-commavq_2 - Folder with checkpoints for config 3 (not present in the repo, add from google drive[https://drive.google.com/drive/folders/1ir8xxywEh3fWsWhd66ARkIDFHPQzCoBU?usp=sharing])
 * train.py - Training Script
 * model.py - Model Information
 * configurator.py - Helper to update the Training Arguments from files in config directory
