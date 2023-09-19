@@ -11,7 +11,7 @@ class ModelConfig:
 
 class PathsConfig:
     def __init__(self):
-        self.out_dir = "out-commavq_2"
+        self.out_dir = "out-commavq"
 
 
 class DatasetConstants:
