@@ -7,13 +7,15 @@ always_save_checkpoint = (
     False  ## When False, only updates the model when val loss improves
 )
 
-init_from = 'resume' # change to 'resume' , when training from a checkpoint
+init_from = "resume"  # change to 'resume' , when training from a checkpoint
 wandb_log = False  # override via command line if you like
 wandb_project = "commavq"
 wandb_run_name = "nano-gpt"
 
 dataset = "commavq"
-gradient_accumulation_steps = 1 ## Adjust depending on memory, not very effective when training on single node
+gradient_accumulation_steps = (
+    1  ## Adjust depending on memory, not very effective when training on single node
+)
 batch_size = 8  ## based on number of parameters and compute size
 block_size = 129 * 20  # 129 tokens per frame times the number of context frames.
 

@@ -10,7 +10,7 @@ import onnxruntime
 import torch
 import torch.nn.functional as F
 
-from config.eval_commavq import ModelConfig, PathsConfig,DatasetConstants
+from config.eval_commavq import DatasetConstants, ModelConfig, PathsConfig
 from model import GPT, GPTConfig
 
 
@@ -76,7 +76,9 @@ def main(ckpt_path=None, onnx_path=None):
         )
 
     ## Dummy Input in the Eval.py script.
-    dummy_input = torch.ones((data_config.BS, GPTConfig.block_size), dtype=torch.int64, device="cuda")
+    dummy_input = torch.ones(
+        (data_config.BS, GPTConfig.block_size), dtype=torch.int64, device="cuda"
+    )
     torch.onnx.export(
         model,
         dummy_input,
