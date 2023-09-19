@@ -7,7 +7,7 @@ always_save_checkpoint = (
     False  ## When False, only updates the model when val loss improves
 )
 
-init_from = 'scratch' # change to 'resume' , when training from a checkpoint
+init_from = "scratch"  # change to 'resume' , when training from a checkpoint
 
 wandb_log = False  # override via command line if you like
 wandb_project = "commavq"

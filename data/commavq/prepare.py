@@ -41,7 +41,7 @@ def main():
     # Save tokenized data into binary files for each split
     for split, dset in tokenized.items():
         arr_len = np.sum(dset["len"], dtype=np.uint64)
-        filename = os.path.join(dir_name,f"{split}.bin")
+        filename = os.path.join(dir_name, f"{split}.bin")
         dtype = np.uint16
         arr = np.memmap(filename, dtype=dtype, mode="w+", shape=(arr_len,))
         total_batches = 100 if split == "40" else 1024
@@ -54,7 +54,6 @@ def main():
             arr[idx : idx + len(arr_batch)] = arr_batch
             idx += len(arr_batch)
         arr.flush()
-
 
     # Create train.bin by concatenating files from 0.bin to 39.bin
     concatenation_command = f'for i in $(seq 0 39); do cat "{dir_name}/$i.bin" >> "{dir_name}/train.bin"; rm "{dir_name}/$i.bin"; done'
