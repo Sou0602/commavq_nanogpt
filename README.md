@@ -1,4 +1,4 @@
-# commavq-nano
+# commavq_nanogpt
 
 ## Contents
 * config
