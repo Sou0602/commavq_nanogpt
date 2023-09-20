@@ -3,7 +3,6 @@ import os
 import pickle
 import time
 from contextlib import nullcontext
-
 import numpy as np
 import torch
 
@@ -18,7 +17,7 @@ def initialize_config():
     config = {
         "out_dir": "out",
         "eval_interval": 500,
-        "log_interval": 1,
+        "log_interval": 100,
         "eval_iters": 200,
         "eval_only": False,
         "always_save_checkpoint": False,
@@ -195,6 +194,9 @@ def initialize_model(config, data_dir):
     if config["block_size"] < model.config.block_size:
         model.crop_block_size(config["block_size"])
         model_args["block_size"] = config["block_size"]
+
+    ## Used for saving checkpoints
+    config["model_args"] = model_args 
 
     model.to(config["device"])
 
